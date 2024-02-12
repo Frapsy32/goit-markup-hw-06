@@ -66,7 +66,8 @@ img {
 
 .container {
   width: 100%;
-  max-width: 1158px;
+  /* max-width: 1158px; */
+  max-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -201,12 +202,13 @@ img {
 
 .section-hero {
   padding: 188px 0 188px;
+  /* padding: 72px 0 72px; */
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-image.jpg);
+    url(../images/hero-section/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -398,8 +400,10 @@ img {
 /* ! ------------- PORTFOLIO ------------- */
 
 .section-portf {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .section-portf-text {
@@ -424,7 +428,8 @@ img {
 }
 
 .portf-list-item {
-  width: calc((100% - 24px * 2) / 3);
+  /* width: calc((100% - 24px * 2) / 3); */
+  width: 100%;
   background-color: #fff;
 }
 
@@ -465,6 +470,10 @@ img {
   line-height: 24px;
   letter-spacing: 1.5;
   text-align: left;
+}
+
+.portf-list-photo {
+  margin: 0 auto;
 }
 
 .portf-list-item:hover {
@@ -940,4 +949,20 @@ img {
 .form-btn:hover,
 .form-btn:focus {
   background-color: #404bbf;
+}
+
+/* ! -------------- MEDIA TABLET ----------------- */
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 734px;
+  }
+
+  .portf-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .portf-list-photo {
+    background-image: url(../images/portfolio-section/);
+  }
 }
