@@ -208,7 +208,7 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-section/hero.jpg);
+    url(../images/hero-section/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -229,7 +229,8 @@ img {
   text-align: center;
 
   max-width: 496px;
-  margin: 0 auto 32px;
+  /* margin: 0 auto 32px; */
+  margin: 0 auto 72px;
 }
 
 .hero-button {
@@ -259,26 +260,37 @@ img {
 /* ! ------------- SIDES ------------------- */
 
 .section-sides {
-  padding-bottom: 120px;
-  padding-top: 120px;
+  /* padding-bottom: 120px;
+  padding-top: 120px; */
+  padding-bottom: 96px;
+  padding-top: 96px;
 }
+
 .sides-list {
   list-style-type: none;
-  display: flex;
-  gap: 24px;
+  /* gap: 24px; */
+}
+
+.sides-list-item:not(:last-child) {
+  margin-bottom: 72px;
 }
 
 .sides-list-item {
-  width: calc((100% - 24px * 3) / 3);
+  /* width: calc((100% - 24px * 3) / 3); */
 }
 
 .sides-header {
-  font-size: 20px;
+  /* font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-align: left;
-  color: #2e2f42;
+  color: #2e2f42; */
+  font-weight: 700;
+  font-size: 36px;
+
+  letter-spacing: 2%;
+  text-align: center;
   margin-bottom: 8px;
 }
 
@@ -292,34 +304,45 @@ img {
   justify-content: center;
   background-color: #f4f4fd;
   margin-bottom: 8px;
+  display: none;
 }
 
 .sides-text {
-  font-size: 16px;
+  /* font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  text-align: left;
+  text-align: left; */
+
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 2%;
 }
 
 /* ! ------------- TEAM -------------- */
 
 .section-team {
   background-color: #f4f4fd;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .team-list {
   list-style-type: none;
   display: flex;
-  gap: 24px;
+  /* gap: 24px; */
+  gap: 72px;
+  flex-wrap: wrap;
 }
 
 .team-list-item {
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
-  width: calc((100% - 24px * 3) / 4);
+  /* width: calc((100% - 24px * 3) / 4); */
+
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -958,11 +981,105 @@ img {
     max-width: 734px;
   }
 
-  .portf-list-item {
+  /** ------------------- Sides -------------------- */
+
+  .sides-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .sides-list-item {
     width: calc((100% - 24px) / 2);
   }
 
-  .portf-list-photo {
-    background-image: url(../images/portfolio-section/);
+  .sides-header {
+    text-align: left;
+  }
+
+  /** ------------------- Team ---------------- */
+
+  .team-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .team-image {
+    margin: 0 auto;
+  }
+
+  .team-list {
+    gap: 64px 24px;
+  }
+
+  /** ------------- Portfolio ---------------- */
+
+  .portf-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+/* ! -------------- MEDIA DESKTOP ----------------- */
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1124px;
+  }
+
+  /** ------------------- Sides -------------------- */
+
+  .section-sides {
+    padding-bottom: 120px;
+    padding-top: 120px;
+  }
+
+  .sides-list-item {
+  }
+
+  .sides-list-item:not(:last-child) {
+    margin-bottom: 0px;
+  }
+
+  .sides-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .sides-header {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #2e2f42;
+  }
+
+  .sides-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: left;
+    flex-wrap: wrap;
+  }
+
+  .sides-icon {
+    display: flex;
+  }
+
+  /** ------------------- Team ---------------- */
+
+  .team-list-item {
+    width: calc((100% - 24px * 3) / 4);
+  }
+
+  /** ------------- Portfolio ---------------- */
+
+  .portf-list-item {
+    width: calc((100% - 24px * 2) / 3);
+  }
+
+  .section-portf {
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 }
