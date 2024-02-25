@@ -1122,6 +1122,11 @@ img {
     padding-top: 0px;
   }
 
+  .contacts {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
   .contacts-list-link {
     color: rgb(67, 68, 85);
     font-family: Roboto;
@@ -1275,6 +1280,10 @@ img {
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 2%;
+  }
+
+  .contacts {
+    margin-top: 24px;
   }
 
   /** ---------------- Hero ---------------------- */
